@@ -19,16 +19,3 @@ after_success:
   - docker push padronlv/multi-server
   - docker push padronlv/multi-worker
 
-
-deploy:
-  edge: true
-  provider: elasticbeanstalk
-  region: "eu-central-1"
-  app: "docker-react"
-  env: "DockerReact-env"
-  bucket-name: "elasticbeanstalk-eu-central-1-189597434021"
-  bucket-path: "docker-react"
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
